@@ -6,16 +6,19 @@
 #define JNIAPP_SINGLETON_H
 #endif //JNIAPP_SINGLETON_H
 
-class SingleIns {
+class ESingleton {
 
 private:
-    static SingleIns *instance;
-    SingleIns();
+    static ESingleton *instance;
+    ESingleton();
+    ~ESingleton();
 
 public:
-    static SingleIns * getInstance();
+    static ESingleton * getInstance();
     void show1();
     void show2();
+    //
+    void release();
 };
 
 

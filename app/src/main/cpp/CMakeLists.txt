@@ -12,6 +12,7 @@ cmake_minimum_required(VERSION 3.4.1)
 
 #批量引入新建文件的配置
 file(GLOB stduFiles lsn4/*.h lsn4/*.cpp)
+file(GLOB extdFiles lsn5/*.h lsn5/*.cpp)
 
 add_library( # Sets the name of the library.
         native-lib
@@ -24,6 +25,7 @@ add_library( # Sets the name of the library.
         log.h
         # 引入多个
         ${stduFiles}
+        ${extdFiles}
         )
 
 # Searches for a specified prebuilt library and stores the path as a
